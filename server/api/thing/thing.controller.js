@@ -25,6 +25,7 @@ exports.show = function(req, res) {
   Thing.findById(req.params.id, function (err, thing) {
     if(err) { return handleError(res, err); }
     if(!thing) { return res.send(404); }
+    thinkg['created_at'] = ObjectId(thing._id).getTimestamp();
     return res.json(thing);
   });
 };
