@@ -1,3 +1,15 @@
-<section id="home-container">  
-  <h1 class="main-title">BlocItOff</h1>
+<section>  
+  <h1 class="main-title">KnockItOut</h1>
+  <input type="text" placeholder="Task" ng-model="name" />
+  <input type="text" placeholder="Description" ng-model="description" />
+  <div class="controls">
+    <button ng-click="post()">Post</button>
+    <button ng-click="get()">Get</button>
+    <button ng-click="delete()">Delete</button>
+  </div>
 </section>
+<figure ng-repeat="task in tasks">
+  <div class="task">{{ task.name }}</div>
+  <div class="description">{{ task.description}}</div>
+</figure>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.3/moment.min.js"></script>

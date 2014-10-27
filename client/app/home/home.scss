@@ -1,3 +1,65 @@
-.main-title {
-  text-align: center;
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,100,300,700);
+@import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light);
+
+$primary: #white;
+$accent: #777;
+$accent2: #2c54d6;
+$button: #333;
+
+body {
+  font-family: 'Raleway', serif;
+  background: $primary;
+}
+
+section {
+  width: 280px;
+  margin: auto;
+  h1 {
+    font-weight: 700;
+    text-align: center;
+    color: $accent;
+  }
+  input {
+    display: block;
+    width: 267px;
+    margin: 10px auto;
+    padding: 5px 10px;
+    background: none;
+    border: 3px solid $accent;
+    outline: none;
+    color: $accent;
+  }
+  ::-webkit-input-placeholder {
+     color: lighten($accent, 30%);;
+  }
+  .controls {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    button {
+      width: 32%;
+      padding: 8px 6px;
+      background: $button;
+      border: 2px solid $accent;
+      outline: none;
+      color: white;
+    }
+  }
+}
+
+figure {
+  width: 499px;
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  border-top: 3px solid $button;
+  div {
+    padding: 10px;
+    font-family: 'Shadows Into Light';
+    font-size: 22px;
+    font-weight: 300;
+    color: $button;
+  }
 }
